@@ -31,5 +31,5 @@ A key feature is **dynamic option fetching** for select fields that depend on ot
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone https://github.com/salarmiirzaeie/smart-insurance-portal
    ```
