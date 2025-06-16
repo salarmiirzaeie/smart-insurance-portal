@@ -9,11 +9,9 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [darkMode, setDarkMode] = useState<boolean>(() => {
-    // بررسی ذخیره شده در localStorage یا پیش‌فرض
     if (typeof window !== "undefined") {
       const saved = localStorage.getItem("darkMode");
       if (saved !== null) return saved === "true";
-      // اگر ذخیره نشده بود، بررسی سیستم
       return window.matchMedia("(prefers-color-scheme: dark)").matches;
     }
     return false;

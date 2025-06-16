@@ -15,9 +15,9 @@ export type ConditionalType = {
 };
 
 export type DynamicOptionsType = {
-  dependsOn: string; // ID فیلدی که این فیلد به آن وابسته است
-  endpoint: string; // مسیر API
-  method?: "GET" | "POST"; // پیش‌فرض: GET
+  dependsOn: string;
+  endpoint: string;
+  method?: "GET" | "POST";
 };
 
 export type DynamicFormField = {
@@ -25,14 +25,14 @@ export type DynamicFormField = {
   label: string;
   type: "text" | "number" | "date" | "textarea" | "select" | "radio" | "checkbox" | "group";
   required?: boolean;
-  options?: OptionType[]; // فقط برای select, radio, checkbox
+  options?: OptionType[];
   validation?: {
     min?: number;
     max?: number;
     pattern?: string;
   };
   conditional?: ConditionalType;
-  dynamicOptions?: DynamicOptionsType; // ← این خط اضافه شده
-  children?: DynamicFormField[]; // برای فیلدهای تودرتو
-  fields?: DynamicFormField[]; // فقط برای type: "group"
+  dynamicOptions?: DynamicOptionsType;
+  children?: DynamicFormField[];
+  fields?: DynamicFormField[];
 };

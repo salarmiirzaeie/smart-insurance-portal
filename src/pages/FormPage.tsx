@@ -96,7 +96,6 @@ const FormPage = () => {
 
   return (
     <div className="max-w-3xl mx-auto p-6 bg-white dark:bg-gray-900 rounded-md">
-      {/* انتخاب فرم */}
       <select
         value={selectedForm?.formId}
         onChange={(e) => {
